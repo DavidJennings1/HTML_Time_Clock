@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Time Clock</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="include.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="title">
+            <h2 class="pageTitle">Offsite Time Management</h2>
+            </div>
+            <div class="dateTime">
+                <h3 id="txt" class="date"></h3>
+                <h3 id="txt2"></h3>
+                <script>startTime()</script>
+            </div>
+            <div class="upperNav">
+                <button>History</button>
+                <button>Admin</button>
+                <button>Reset</button>
+            </div>
+            <div class="login">
+                <form>
+                    <p>
+                        <label>Enter Employee Number</label>
+                        <input id="enum" type="text" name = "empNum">
+                    </p>
+                </form>
+            </div>
+            <div class="timeRecord">
+                <div class="inOut">
+                    <p>
+                        <button id="inButton" onclick="inTime()">Clock In</button>
+                    </p>
+                    <p>
+                        <textarea name="inTime" id="in">
+                        </textarea>
+                    </p>
+                    <p>
+                        <button id="outButton" onclick="outTime()" disabled>Clock Out</button>
+                    </p>
+                    <p>
+                        <textarea name="outTime" id="out">
+                        </textarea>
+                    </p>
+                    <p>
+                        <button disabled id="totalTimeButton" onclick="totalTime()">Total</button>
+                    </p>
+                    <p>
+                        <textarea name="TotalTime" id="total">
+                        </textarea>
+                    </p>
+                </div>
+                <div class="listbox">
+                        <p>
+                            <textarea name="report" id="details">
+                            </textarea>
+                        </p>
+                </div>
+            </div>
+            <div class="footer">
+                <footer>
+                    &copy; 2019 OTM Ltd.
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
